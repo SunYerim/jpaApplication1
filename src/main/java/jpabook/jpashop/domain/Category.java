@@ -25,7 +25,7 @@ public class Category {
     private List<Item> items = new ArrayList<>();
 
     // 셀프로 양방향 연관관계를 걸었다고 생각하면 됨.
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     private Category parent;
 
