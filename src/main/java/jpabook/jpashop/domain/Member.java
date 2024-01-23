@@ -20,5 +20,6 @@ public class Member {
     private Address address;
 
     @OneToMany(mappedBy = "member") // 연관관계의(매핑된) 거울이다.
+    // 가급적 변경 x , 컬랙션을 필드에다 바로 초기화하는 것이 가장 좋다.
     private List<Order> orders = new ArrayList<>();
 }
